@@ -1,13 +1,6 @@
 version: "3.8"
 
 services:
-  search:
-    build: ./search
-    volumes:
-      - torrents:/root/torrents
-    command: tail -f /dev/null
-    container_name: search
-
   uploader:
     build: ./uploader
     volumes:
@@ -22,6 +15,13 @@ services:
       - torrents:/root/torrents
     command: tail -f /dev/null
     container_name: download
+
+  search:
+    build: ./search
+    volumes:
+      - torrents:/root/torrents
+    command: tail -f /dev/null
+    container_name: search
 
 volumes:
   files: 
