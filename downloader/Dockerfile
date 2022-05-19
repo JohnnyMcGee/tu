@@ -4,7 +4,7 @@ RUN apt update && apt-get install -y rtorrent \
 && mkdir /root/files \
 && mkdir /root/torrents
 
-COPY rtorrent.rc /root/.rtorrent.rc
+# COPY rtorrent.rc /root/rtorrent.rc
 COPY ./download.sh /root/torrents/download.sh
 COPY ./clear.sh /root/torrents/clear.sh
 
