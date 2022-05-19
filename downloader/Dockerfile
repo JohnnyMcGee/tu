@@ -5,8 +5,8 @@ RUN apt update && apt-get install -y rtorrent \
 && mkdir /root/torrents
 
 COPY rtorrent.rc /root/.rtorrent.rc
-COPY ./download.sh /root/torrents
-COPY ./clear.sh /root/torrents
+COPY ./download.sh /root/torrents/
+COPY ./clear.sh /root/torrents/
 
 RUN mkdir ~/rtorrent_Download_Files \
 && mkdir ~/rtorrent_session \
