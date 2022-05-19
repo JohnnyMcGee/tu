@@ -23,6 +23,6 @@ services:
     command: tail -f /dev/null
     container_name: download
 
-volumes: 
+volumes:
   files: 
   torrents:
