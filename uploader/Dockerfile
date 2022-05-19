@@ -6,6 +6,8 @@ RUN go install github.com/prasmussen/gdrive@latest \
 WORKDIR /root/files
 
 COPY ./cred.json /root/.gdrive/cred.json
+COPY ./upload.sh /root/files/
+COPY ./clear.sh /root/files/
 
 VOLUME /root/files
 
